@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  spidercon:
+    image: spidercon
+    build:
+      context: spidercon
+    env_file: .env
+    volumes:
+      - ${PWD}/data:/home/console

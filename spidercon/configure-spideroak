@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cat ->/home/console/config.json <<-EOF
+{
+  "username": "$SPIDEROAK_USERNAME",
+  "password": "$SPIDEROAK_PASSWORD",
+  "reinstall": true,
+  "device_name": "console"
+}
+EOF

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ ! -e /home/console/.profile ]; then
+  sudo find /etc/skel -type f -exec cp \{\} /home/console \;
+  sudo chown -R console.console /home/console
+fi
+configure-spideroak
+sudo chown console.console /home/console
+exec bash -l
